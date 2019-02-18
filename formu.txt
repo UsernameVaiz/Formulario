@@ -1,0 +1,102 @@
+package formulario;
+import javax.swing.JOptionPane; 
+
+public class Formulario {
+
+    public static void main(String[] args) {
+       int opc, op;
+       double area,volumen,daUno,daDos,Datres,perimetro,radio;
+       do{
+       JOptionPane.showMessageDialog(null, "Formulario \n");
+       
+       opc=Integer.parseInt (JOptionPane.showInputDialog 
+        ("Area\n" +
+                "Elige una opcion\n" +
+                "1)Area \n" +
+                "2) Volumen \n"));
+       if(opc==1)
+ {
+     op= Integer.parseInt (JOptionPane.showInputDialog 
+        ("1)Circulo \n" +
+                "2) Triangulo \n" +
+                "3) Rectangulo \n" +
+                "4)Salir \n" +
+                "Elige una opcion"));
+     switch (op)
+           {
+                   case 1:
+                       daUno=Double.parseDouble(JOptionPane.showInputDialog
+                              ("Ingresa el radio:"));
+                       area = 2*3.1416*daUno;
+                       JOptionPane.showInputDialog(null,"Resultado: " +area);
+                    break;
+                   case 2:
+                       daUno=Double.parseDouble(JOptionPane.showInputDialog
+                              ("Ingresa la base:"));
+                       daDos=Double.parseDouble(JOptionPane.showInputDialog
+                              ("Ingresa la altura:"));
+                       area=daUno*daDos/2;
+                       JOptionPane.showInputDialog(null,"Resultado: " +area);
+                        break;
+                   case 3:
+                       daUno=Double.parseDouble(JOptionPane.showInputDialog
+                              ("Ingresa la base:"));
+                       daDos=Double.parseDouble(JOptionPane.showInputDialog
+                              ("Ingresa la altura:"));
+                       area=daUno*daDos;
+                       JOptionPane.showInputDialog(null,"Resultado: " +area);
+                       break;
+                   case 4:   
+                       System.exit(0);
+                        JOptionPane.showInputDialog(null," Final " );
+                       break;  }
+                    
+           
+ 
+ }
+ else
+     if(opc==2)
+ {
+     op=Integer.parseInt (JOptionPane.showInputDialog 
+        ("Volumen \n" +
+                "1)Piramide\n" +
+                "2)Cilindro\n" +
+                "3) Salir \n" +
+                 "Elige una opción\n"));
+      switch (op)
+           {
+                   case 1:
+                       daUno=Double.parseDouble(JOptionPane.showInputDialog
+                              ("Ingresa el base:"));
+                        daDos=Double.parseDouble(JOptionPane.showInputDialog
+                              ("Ingresa la altura:"));
+                       volumen = 1/2*daUno*daDos;
+                       JOptionPane.showInputDialog(null,"Resultado: " +volumen);
+                    break;
+                   case 2:
+                       daUno=Double.parseDouble(JOptionPane.showInputDialog
+                              ("Ingresa el radio:"));
+                       daDos=Double.parseDouble(JOptionPane.showInputDialog
+                              ("Ingresa la altura:"));
+                       volumen=3.1416*daUno*daDos;
+                       JOptionPane.showInputDialog(null,"Resultado: " +volumen);
+                       case 3:   
+                       System.exit(0);
+                        JOptionPane.showInputDialog(null," Final " );
+                       break;  }
+                    
+         }
+       }
+ 
+ while(opc!=3);
+               
+
+ System.exit(0);
+ 
+ 
+
+       
+        
+    }
+    
+}
